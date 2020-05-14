@@ -19,7 +19,7 @@ namespace FancyRpg.Utility
             {
                 for (int j = 0; j < 20; j++)
                 {
-                    myMap[i, j] = rand.Next(0, 2);
+                    myMap[i, j] = rand.Next(0, 3);
                 }
             }
         }
@@ -63,6 +63,19 @@ namespace FancyRpg.Utility
         public Monster getMonster()
         {
             return encounter;
+        }
+
+        public void printMap()
+        {
+            for (int i = 0; i < 20; i++)
+            {
+                Console.WriteLine("\n");
+                for (int j = 0; j < 20; j++)
+                {
+                    Console.Write(myMap[i,j]);
+                    Console.Write(" ");
+                }
+            }
         }
     }
 }
